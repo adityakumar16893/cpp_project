@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>CPP Student Details</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 		<script src="../static/js/appScript.js"></script> 
+		<link rel="stylesheet" href="../static/css/appCss.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body class="container mainContainer">
+		<h2 class="mainHeading">
+			CPP Student Details
+		</h2>
+		<hr style="border-color: silver;">
+		<div class="container">
+			<div class="card" style="border: none; background: transparent;">
+				<div class="card-body">
+					<div class="btn mainBtn" onclick="showAddForm()">Add Student Record</div>
+					<div class="btn mainBtn" id="showStudentsBtn" onclick="showViewForm()">View Student Record</div>
+				</div>
+			</div>
+		</div>
+		<hr style="border-color: silver;">
+		<form class="container" id="addForm" style="display: none;">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Add new student</h5>
+					<div class="form-group">
+						<label for="studentName">
+							Enter Student Name
+						</label>
+						
+						<input type="text" class="form-control" id="name" placeholder="Enter Student name" required>
+					</div>
+
+					<div class="form-group">
+						<label for="studentEmail">
+							Enter Email address
+						</label>
+						
+						<input type="email" class="form-control" id="emailId" placeholder="name@example.com" required>
+					</div>
+
+					<div class="form-group">
+						<label for="studentContactNumber">
+							Enter Mobile number
+						</label>
+						
+						<input type="tel" class="form-control" id="contactNumber" placeholder="88888 88888" required>
+					</div>
+				</div>
+				<button type="submit" onclick="addStudent()" class="btn addSubmitBtn">
+					Submit
+				</button>
+			</div>
+		</form>
+
+		<div class="container">
+			<table class="table table-bordered table-striped" id="tablearea"></table>
+		</div>
+			
+		<form id="updateStudentDialog" class="container">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title" style="text-align: center;">Update student details</h5>
+					<hr>
+					<div class="form-group">
+						<label for="studentId">
+							Enter Student Id
+						</label>
+						
+						<input type="number" class="form-control" id="studentId" placeholder="Enter Student Id" readonly>
+					</div>
+
+					<div class="form-group">
+						<label for="studentName">
+							Enter Student Name
+						</label>
+						
+						<input type="text" class="form-control" id="name" placeholder="Enter Student name" required>
+					</div>
+
+					<div class="form-group">
+						<label for="studentEmail">
+							Enter Email address
+						</label>
+						
+						<input type="email" class="form-control" id="emailId" placeholder="name@example.com" required>
+					</div>
+
+					<div class="form-group">
+						<label for="studentContactNumber">
+							Enter Mobile number
+						</label>
+						
+						<input type="tel" class="form-control" id="contactNumber" placeholder="88888 88888" required>
+					</div>
+				</div>
+				<button type="submit" onclick="updateStudent()" class="btn updateSubmitBtn">
+					Submit
+				</button>
+			</div>
+		</form>
+	</body>
+</html>

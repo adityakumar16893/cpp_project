@@ -29,7 +29,7 @@ CORS(application)
 def index():
     return render_template('app.html')
 
-application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://python:python123@database-1.ckrojnpkqucm.us-east-1.rds.amazonaws.com:5432/student"
+application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:python123@database-4.cvmkcdhwam9i.us-east-1.rds.amazonaws.com:5432/student"
 db = SQLAlchemy(application)
 
 if __name__ == '__main__':

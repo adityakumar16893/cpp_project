@@ -33,5 +33,5 @@ application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:python123
 db = SQLAlchemy(application)
 
 if __name__ == '__main__':
-    app = CppMain(application)
+    application = CppMain(application)
     application.run(host='0.0.0.0', port=7000, debug=True)

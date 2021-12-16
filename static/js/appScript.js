@@ -1,4 +1,4 @@
-var serverAddress = "http://mypythoncpp-env.eba-dxyvugmv.us-east-1.elasticbeanstalk.com//students";
+var serverAddress = "http://mypythoncpp-env.eba-dxyvugmv.us-east-1.elasticbeanstalk.com/students";
 
 
 window.onload = function() {

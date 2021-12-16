@@ -15,7 +15,6 @@ sys.path.insert(2, models_path)
 
 import services
 
-
 class CppMain:
     def __init__(self, app):
         self.app = app
